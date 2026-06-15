@@ -4,7 +4,7 @@ from django.db import models
 
 
 
-class TecherModel(models.model):
+class TecherModel(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
     birthday = models.DateField()
@@ -15,5 +15,5 @@ class TecherModel(models.model):
         ('erkak','Erkak'),
         ('ayol','Ayol')
     )
-    gender = models.CharField(choices=Gender)
+    gender = models.CharField(max_length=10, choices=Gender)
     password = models.CharField(max_length=6, help_text="6-ta belgi dan iborat bolsin ")
