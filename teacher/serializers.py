@@ -4,4 +4,4 @@ from .models import TecherModel
 class TecherSerializer(serializers.ModelSerializer):
     class Meta:
         model = TecherModel
-        fields = '__all__'
+        fields = ('id', 'name', 'surname', 'birthday', 'ade', 'username', 'email')
